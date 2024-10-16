@@ -37,6 +37,8 @@ body {
     border-radius: 20px; /* Rounded corners */
     cursor: pointer; /* Pointer on hover */
     font-size: 30px;
+    text-decoration: none; /* Remove underline from links */
+    
 }
 
 .nav-button:hover {
