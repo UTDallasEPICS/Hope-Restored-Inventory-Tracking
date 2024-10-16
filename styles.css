@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e0f2e9;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c69f7a;
+    padding: 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: #d5c1ab;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #b89f83;
+}
+
+/* Dashboard Section */
+.dashboard {
+    padding: 20px;
+}
+
+.dashboard h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    background-color: #c8e6c9;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card h2 {
+    font-size: 48px;
+    color: #000;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Categories Section */
+.categories {
+    padding: 20px;
+}
+
+.categories h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.categories ul {
+    list-style: none;
+}
+
+.categories li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.green {
+    background-color: #81c784;
+}
+
+.blue {
+    background-color: #64b5f6;
+}
+
+.red {
+    background-color: #e57373;
+}
+
+.beige {
+    background-color: #f5c6a5;
+}
+
+.pink {
+    background-color: #f48fb1;
+}
+
+/* Footer Section */
+footer {
+    background-color: #c69f7a;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.admin-section {
+    display: flex;
+    align-items: center;
+    background-color: #a67c52;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.admin-section p {
+    margin-right: 10px;
+}
+
+.admin-section img {
+    height: 30px;
+}
