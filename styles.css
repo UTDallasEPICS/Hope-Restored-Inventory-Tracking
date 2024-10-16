@@ -1,166 +1,118 @@
-* {
+/* styles.css */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #e0f2e9;
-}
-
-/* Navigation Bar */
 .navbar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #74af88;
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between; /* Space between logo, title, and links */
+    background-color: #f8f9fa; /* Background color for the navbar */
     padding: 20px;
 }
 
+.logo img {
+    height: 50px; /* Adjust logo height as needed */
+}
+
 .nav-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: black;
+    margin: 0 20px; /* Space between title and links */
+    font-size: 24px; /* Font size for title */
+    color: #333; /* Color for the title */
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    align-items: center; /* Aligns the buttons vertically */
 }
 
 .nav-button {
-    background-color: #d5c1ab;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
+    margin-left: 15px; /* Space between buttons */
+    padding: 10px 15px; /* Padding for the buttons */
+    border: none; /* Remove default border */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer */
+    border-radius: 5px; /* Rounded corners */
 }
 
 .nav-button:hover {
-    background-color: #b89f83;
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
-.logo img {
-    height: 60px;
-}
-
-/* Dashboard Section */
 .dashboard {
     padding: 20px;
-    text-align: center;
 }
 
-.dashboard-title h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.dashboard hr.dark-line {
-    border: 1px solid black;
-    margin: 10px 0;
+.dashboard-title {
+    text-align: center; /* Center the title */
 }
 
 .dashboard-cards {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 20px 0;
+    justify-content: center; /* Center the cards */
 }
 
 .card {
-    background-color: #c8e6c9;
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin: 0 15px; /* Space between cards */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center the text in cards */
 }
 
-.card h2 {
-    font-size: 64px;
-    color: #000;
+.count {
+    font-size: 32px; /* Adjust the font size for the count */
 }
 
-.card p {
-    font-size: 20px;
+.dark-line {
+    border: 1px solid #333; /* Dark line styling */
 }
 
-/* Categories Section */
 .categories {
     padding: 20px;
 }
 
 .categories h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    text-align: center; /* Center the categories title */
 }
 
 .categories ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
 .categories li {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    margin-bottom: 10px;
+    align-items: center; /* Align circle and text vertically */
 }
 
 .circle {
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; /* Makes the circle */
+    margin-left: 10px; /* Space between text and circle */
 }
 
-.green {
-    background-color: #81c784;
-}
+.green { background-color: green; }
+.blue { background-color: blue; }
+.red { background-color: red; }
+.beige { background-color: beige; }
+.pink { background-color: pink; }
 
-.blue {
-    background-color: #64b5f6;
-}
-
-.red {
-    background-color: #e57373;
-}
-
-.beige {
-    background-color: #f5c6a5;
-}
-
-.pink {
-    background-color: #f48fb1;
-}
-
-/* Footer Section */
 footer {
-    background-color: #c69f7a;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-end;
+    background-color: #f8f9fa; /* Footer background color */
+    padding: 10px;
+    text-align: center; /* Center footer content */
 }
 
 .admin-section {
     display: flex;
-    align-items: center;
-    background-color: #a67c52;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
+    align-items: center; /* Align admin text and icon */
+    justify-content: center; /* Center footer content */
 }
 
 .admin-section p {
-    margin-right: 10px;
-}
-
-.admin-section img {
-    height: 30px;
+    margin-right: 10px; /* Space between text and icon */
 }
