@@ -1,0 +1,17 @@
+[33mcommit 5fe76d396cf66f56b5e90374d5c5c726987919a3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Hillary Wong <wong.hillary@yahoo.com>
+Date:   Tue Sep 3 10:34:54 2024 -0500
+
+    moved files into top directory
+
+[33mcommit 2e8a1dd259d70b90f7718ddfe392cea344ff5d95[m
+Author: Hillary Wong <wong.hillary@yahoo.com>
+Date:   Wed Aug 28 15:37:33 2024 -0500
+
+    intialized nuxt
+
+[33mcommit 5e1b975124a5dd6de306176250629378a2cb8303[m
+Author: devsheth05 <149652852+devsheth05@users.noreply.github.com>
+Date:   Wed Oct 16 02:39:04 2024 -0500
+
+    Initial commit - I messed around with the frontend for task
