@@ -26,5 +26,11 @@
   <style scoped>
   /* Add your styles here or import a separate CSS file */
   /*@import 'styles.css'; /* Adjust the path as necessary */
+  
+  .main-content {
+    margin-left: 200px; /* Match the sidebar width */
+    padding: 10px 200px; /* Add some padding for spacing */
+    text-align: center; /* Center text within the main content */
+  }
   </style>
   
