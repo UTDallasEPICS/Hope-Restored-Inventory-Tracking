@@ -1,3 +1,8 @@
 export default defineNuxtConfig({
-  // ...existing configurations
+
+  runtimeConfig: {
+    public: {
+      apiBase: 'http://localhost:8000', // Replace with your backend API URL
+    },
+  },
 });
