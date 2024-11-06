@@ -8,19 +8,23 @@
       <table>
         <thead>
           <tr>
-            <th>Item Category</th>
-            <th>Item Name</th>
-            <th>Quantity</th>
-            <th>Status</th>
             <th>Barcode</th>
+            <th>Category</th>
+            <th>Style</th>
+            <th>Gender</th>
+            <th>Size</th>
+            <th>Quantity</th>
+            <th>Location</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="item in inventory" :key="item.id">
             <td>{{ item.category }}</td>
-            <td>{{ item.name }}</td>
+            <td>{{ item.style }}</td>
+            <td>{{ item.gender }}</td>
+            <td>{{ item.size }}</td>
             <td>{{ item.quantity }}</td>
-            <td>{{ item.status }}</td>
+            <td>{{ item.location}}</td>
             <td><BarcodeGenerator :upcCode="item.upcCode" /></td>
           </tr>
         </tbody>
