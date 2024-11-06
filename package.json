@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "jsbarcode": "^3.11.6",
     "nuxt": "^3.13.2",
+    "quagga": "^0.12.1",
     "vue": "latest"
   }
 }

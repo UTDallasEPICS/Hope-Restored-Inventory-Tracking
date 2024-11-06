@@ -1,12 +1,31 @@
 <template>
   <div>
     <h1>Inventory</h1>
-    <ul>
-      <li v-for="item in inventory" :key="item.id">
-        <p>{{ item.name }}</p>
-        <BarcodeGenerator :upcCode="item.upcCode" />
-      </li>
-    </ul>
+
+    <!-- Inventory Table Section -->
+    <section id="inventory">
+      <h2>Inventory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item Category</th>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Barcode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in inventory" :key="item.id">
+            <td>{{ item.category }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.status }}</td>
+            <td><BarcodeGenerator :upcCode="item.upcCode" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </div>
 </template>
 
@@ -28,3 +47,24 @@ onMounted(async () => {
   }
 });
 </script>
+
+<style scoped>
+/* Add any styling you need for the table, similar to your original HTML page */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+td {
+  text-align: center;
+}
+</style>
