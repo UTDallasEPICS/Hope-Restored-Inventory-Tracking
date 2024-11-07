@@ -2,7 +2,7 @@
     <div>
       <main>
         <h1>Scanner Page</h1>
-        <p>Welcome to the Scanner page. You can scan and see what item you added or donated here.</p>
+        <p>Wgitcanner page. You can scan and see what item you added or donated here.</p>
       </main>
       <input type="file" name="image" accept="image/*" capture="environment">
     </div>

@@ -2,9 +2,27 @@
   <div>
     <h1>Inventory</h1>
 
+    <!-- Filter and Sort Section -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+      <div>
+        <label for="sortOptions">Filter: </label>
+        <select v-model="selectedSort" id="sortOptions" style="padding: 8px; border-radius: 4px; border: 1px solid #ddd;">
+          <option value="alphabetical">Sort Alphabetically (Category)</option>
+          <option value="recent">Sort by Most Recent Addition</option>
+          <option value="dateAdded">Sort by Date Added</option>
+        </select>
+      </div>
+
+      <input 
+        v-model="searchQuery"
+        type="text" 
+        placeholder="Search..."
+        style="padding: 8px; border-radius: 4px; border: 1px solid #ddd; width: 200px;"
+      />
+    </div>
+
     <!-- Inventory Table Section -->
     <section id="inventory">
-      <h2>Inventory</h2>
       <table>
         <thead>
           <tr>
@@ -19,7 +37,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in inventory" :key="item.id">
+          <tr v-for="item in sortedAndFilteredInventory" :key="item.id">
             <td>{{ item.id }}</td>
             <td>{{ item.upcCode }}</td>
             <td>{{ item.category }}</td>
@@ -37,11 +55,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import BarcodeGenerator from '~/components/BarcodeGenerator.vue';
 import { useRuntimeConfig } from '#app';
 
 const inventory = ref([]);
+const searchQuery = ref(''); // Search query model
+const selectedSort = ref('alphabetical'); // Sort option model
 const config = useRuntimeConfig();
 
 onMounted(async () => {
@@ -53,9 +73,36 @@ onMounted(async () => {
     console.error('Fetch error:', error);
   }
 });
+
+// Computed property to filter and sort inventory based on search query and sort option
+const sortedAndFilteredInventory = computed(() => {
+  let filtered = inventory.value;
+
+  // Filter by search query
+  if (searchQuery.value) {
+    const query = searchQuery.value.toLowerCase();
+    filtered = filtered.filter(item => 
+      Object.values(item).some(value => 
+        value.toString().toLowerCase().includes(query)
+      )
+    );
+  }
+
+  // Sort based on selected option
+  return filtered.slice().sort((a, b) => {
+    if (selectedSort.value === 'alphabetical') {
+      return a.category.localeCompare(b.category); // Alphabetical by category
+    } else if (selectedSort.value === 'recent') {
+      return b.id - a.id; // Assuming "id" is assigned sequentially, so higher ID means more recent
+    } else if (selectedSort.value === 'dateAdded') {
+      return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime(); // Sort by dateAdded if available
+    }
+    return 0;
+  });
+});
 </script>
 
-<style>
+<style scoped>
 /* Add any styling you need for the table */
 table {
   width: 100%;
