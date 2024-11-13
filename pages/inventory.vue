@@ -56,7 +56,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-import BarcodeGenerator from '~/components/BarcodeGenerator.vue';
+//import BarcodeGenerator from '~/components/BarcodeGenerator.vue';
 import { useRuntimeConfig } from '#app';
 
 const inventory = ref([]);
