@@ -1,36 +1,17 @@
 <template>
     <div>
-      <main>
-        <h1>Scanner Page</h1>
-        <p>Wgitcanner page. You can scan and see what item you added or donated here.</p>
-      </main>
-      <input type="file" name="image" accept="image/*" capture="environment">
+        <h1>QR Code Scanner</h1>
+        <QrCodeScanner />
     </div>
-  </template>
-  
-  <script>
-  export default {
-    // You can add component-specific logic here if needed
-    methods: {
-    handleFileChange(event) {
-      const file = event.target.files[0]; // Get the selected file
-      if (file) {
-        // You can now use the file (e.g., display it, upload it, etc.)
-        console.log('Selected file:', file);
-      }
+</template>
+
+<script setup lang="ts">
+    import QrCodeScanner from '~/components/QrCodeScanner.vue';
+</script>
+
+<style scoped>
+    h1 {
+        text-align: center;
+        margin: 20px 0;
     }
-    }
-  }
-  </script>
-  
-  <style scoped>
-  /* Add your styles here or import a separate CSS file */
-  /*@import 'styles.css'; /* Adjust the path as necessary */
-  
-  .main-content {
-    margin-left: 200px; /* Match the sidebar width */
-    padding: 10px 200px; /* Add some padding for spacing */
-    text-align: center; /* Center text within the main content */
-  }
-  </style>
-  
+</style>

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\prisma",
+    "\\public",
+    "\\server",
+    "\\server\\api",
+    "\\server\\api\\clothing",
+    "\\server\\api\\inventory",
+    "\\server\\utils"
+  ],
+  "SelectedNode": "\\server\\api\\clothing\\[id].ts",
+  "PreviewInSolutionExplorer": false
+}

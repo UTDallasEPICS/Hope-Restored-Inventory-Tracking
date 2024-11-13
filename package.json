@@ -11,8 +11,14 @@
   },
   "dependencies": {
     "jsbarcode": "^3.11.6",
-    "nuxt": "^3.13.2",
+    "nuxt": "^3.14.159",
     "quagga": "^0.12.1",
-    "vue": "latest"
+    "vue": "latest",
+    "vue3-qr-reader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/vue": "^1.0.31",
+    "typescript": "^5.6.3"
   }
 }

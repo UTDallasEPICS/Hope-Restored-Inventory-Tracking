@@ -1,9 +1,14 @@
+import { defineNuxtConfig } from 'nuxt/config';
+
 export default defineNuxtConfig({
-  runtimeConfig: {
-    public: {
-      apiBase: 'http://localhost:8000', // Replace with your backend API URL
-    },
+  // Disable Server-Side Rendering
+  ssr: false,
+
+  plugins: ['~/plugins/vue3-qr-reader.client.ts'],
+
+  typescript: {
+      shim: false
   },
 
-  compatibilityDate: '2024-10-30',
+  compatibilityDate: '2024-11-12'
 });
