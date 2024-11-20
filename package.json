@@ -19,11 +19,8 @@
     "@types/node": "^22.9.0",
     "@types/vue": "^1.0.31",
     "typescript": "^5.6.3"
-<<<<<<< Updated upstream
-=======
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
->>>>>>> Stashed changes
   }
 }
