@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5", // or "es6"
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": ["**/*.ts"]
+}
+
+/*{
+  "extends": "../.nuxt/tsconfig.server.json"
+}*/
