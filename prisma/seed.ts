@@ -109,7 +109,7 @@ const sizeCodes = [
   // Insert an inventory item with the barcode `01010101`
   await prisma.inventory.create({
     data: {
-      barcode: '02030403',
+      barcode: '02030503',
       quantity: 10,
       categoryId: category.id, // 1 (01 in barcode)
       styleId: style.id,       // 1 (01 in barcode)
